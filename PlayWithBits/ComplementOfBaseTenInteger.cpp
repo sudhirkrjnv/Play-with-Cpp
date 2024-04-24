@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     int n = 5;
-    cout << "Enter any number : ";
+    cout << "Enter an Integer : ";
     cin >> n;
 
     int m = n;
@@ -19,6 +19,6 @@ int main(){
     }
     int ans = (~n) & mask;
 
-    cout << "Complement of given no having base 10 is : " <<ans << endl;
+    cout << "Complement of given Integer having base 10 is : " <<ans << endl;
 
 }
