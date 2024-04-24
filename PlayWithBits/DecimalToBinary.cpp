@@ -1,25 +1,26 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include<deque>
 using namespace std;
-int main(){
-    int n = 6;
-    //cout << "Enter any number to convert into Binary : ";
-    //cin >> n ;
 
-    int ans = 1;
-    int i = 0;
- 
-    while (n != 0){
-        int bit = n & 1;
-        cout << i << "th loop > bit : "<< bit << endl;
-        ans = (bit * (int)pow(10, i)) + ans;
-        cout << i << "th loop > ans : "<< ans << endl << endl;
-        n = n >> 1;
-        i++;
+int main() {
+    int decimal;
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+
+    deque<int> d;
+
+    while (decimal > 0) {
+        int r = decimal % 2;
+        d.push_front(r);
+        decimal = decimal / 2;
     }
 
-    cout << " Binary Code : " <<ans << endl;
+    cout << "Binary equivalent: ";
+    for(int i: d){
+        cout << i ;
+    }
 
-    return 0;
-    
+    cout << endl;
+
+
 }
