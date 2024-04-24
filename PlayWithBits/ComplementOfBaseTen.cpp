@@ -1,8 +1,10 @@
 #include <iostream>
 using namespace std;
 int main(){
-
     int n = 5;
+    cout << "Enter any number : ";
+    cin >> n;
+
     int m = n;
 
     if (n == 0){
@@ -17,7 +19,6 @@ int main(){
     }
     int ans = (~n) & mask;
 
-    cout << ans << endl;
-    cout << (~5);
+    cout << "Complement of given no having base 10 is : " <<ans << endl;
 
 }
