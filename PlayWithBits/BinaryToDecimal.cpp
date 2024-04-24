@@ -8,14 +8,14 @@ int main() {
     cin >> binary;
 
     int ans = 0;
+    int i = 0;
 
     while (binary != 0) {
         int digit = binary % 10;
-        int i = 0;
         if(digit == 1){
             ans = digit * pow(2, i) + ans ;
         }
-        i = i++;
+        i++;
         binary = binary / 10;
     }
 
