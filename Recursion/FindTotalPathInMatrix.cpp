@@ -47,7 +47,6 @@ int main(){
         }
     }
 
-    
     int ans = findTotalPath(arr, 0, 0, m, n);
     cout << "Total number of paths: " << ans << endl;
 
