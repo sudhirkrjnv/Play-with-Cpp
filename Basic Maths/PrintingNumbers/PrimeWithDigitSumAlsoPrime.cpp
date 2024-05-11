@@ -1,7 +1,7 @@
+// Prime Number between two numbers whose digit sum  is also prime
 #include<iostream>
 #include<vector>
 using namespace std;
-
 
 bool isPrime(int n){
     if( n <= 1){
@@ -25,13 +25,11 @@ int digitSum(int n){
 
 int main() {
     int n1, n2;
-    cout << "Enter starting number from which we have to print prime numbers: ";
+    cout << "Enter starting number : ";
     cin >> n1;
-    cout << "Enter ending number up to which we have to print prime numbers: ";
+    cout << "Enter ending number : ";
     cin >> n2;
     vector<int> v;
-
-    // Loop through the numbers from n1 to n2
 
     for (int i = n1; i <= n2; ++i) {
         if (isPrime(i) && isPrime(digitSum(i))) {
