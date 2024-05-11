@@ -14,6 +14,14 @@ bool isPrime(int n){
     }
     return 1;
 }
+int digitSum(int n){
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
 
 int main() {
     int n1, n2;
@@ -26,10 +34,11 @@ int main() {
     // Loop through the numbers from n1 to n2
 
     for (int i = n1; i <= n2; ++i) {
-        if (isPrime(i)) {
+        if (isPrime(i) && isPrime(digitSum(i))) {
             v.push_back(i);
         }
     }
+
 
     for( int i: v){
         cout << i << " ";
