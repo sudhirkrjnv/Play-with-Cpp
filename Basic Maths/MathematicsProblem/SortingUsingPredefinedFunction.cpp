@@ -3,14 +3,14 @@
 #include<algorithm>
 using namespace std;
 int main(){
-    cout << "enter total no of elements : ";
+    cout << "Enter total no of elements : ";
     int n;
     cin >> n;
 
     int arr[10];
     vector<int> ans;
 
-    cout << "enter elements : ";
+    cout << "Enter elements : ";
     for(int i = 0; i < n; i++){
         cin >> arr[i];
         ans.push_back(arr[i]);
