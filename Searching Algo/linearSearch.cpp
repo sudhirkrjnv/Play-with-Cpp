@@ -1,25 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    cout << " No of array element for searching : ";
+
+int linearSearch(vector<int>&arr, int key){
+    for(int i=0; i<arr.size(); i++){
+        if(arr[i] == key){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    cout << "Total no of elements in Arrays : ";
     int n;
     cin >> n;
 
-    cout << " Enter the arr elements for searching : ";
+    cout << "Input the array elements : ";
     int *arr = new int[n];
-
-    for(int i=0; i<n; i++){
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    sort(arr, arr+n);
+    cout << "Iput the Key for searching: ";
+    int key;
+    cin >> key;
 
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
+    vector<int> V(arr, arr+n);
+
+    int index = linearSearch(V, key);
+
+    if(index != -1){
+        cout << "Key present at index : " << index << endl;
+    }else{
+        cout << "Key is not Present "<< endl;
     }
 
-    delete[] arr;
-
-    return 0;
-     
 }
