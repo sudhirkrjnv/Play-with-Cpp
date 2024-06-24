@@ -2,11 +2,11 @@
 using namespace std;
 
 double power(double a, int n){
-    double ans = 1;
+    double ans = 1.0;
     
     if (n < 0) {
-        a = 1 / a;
-        n = -n;
+        a = 1.0 / a;  
+        n = static_cast<unsigned int>(-n);
     }
     while(n > 0){
         if(n&1){
