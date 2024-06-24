@@ -1,12 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-double power(double a, int n){
+double power(double a, long long int n){
     double ans = 1.0;
     
     if (n < 0) {
         a = 1.0 / a;  
-        n = static_cast<unsigned int>(-n);
+        n = static_cast<unsigned long long int>(-n);
     }
     while(n > 0){
         if(n&1){
@@ -25,7 +25,7 @@ int main(){
     double x;
     cin >> x;  //input for base
 
-    int n;
+    long long int n;
     cin >> n;  // input for power
 
     double mypower = power(x, n);
