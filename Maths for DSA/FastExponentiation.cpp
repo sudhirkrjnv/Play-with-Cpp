@@ -23,10 +23,10 @@ int main(){
     // a^n = ans
 
     double x;
-    cin >> x;  //input for base
+    cin >> x;  //taking input for base
 
     long long int n;
-    cin >> n;  // input for power
+    cin >> n;  //taking input for power
 
     double mypower = power(x, n);
     cout << mypower;
